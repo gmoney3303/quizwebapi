@@ -1,0 +1,22 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10%;
+
+}
+
+button{
+display: flex;
+flex-direction: column;
+width: 10rem;
+margin: 2px;
+height: 5rem;
+background-color: blueviolet;
+margin-left: 40%;
+}
+
+h1,
+h2
+{
+    text-align: center;
+}
