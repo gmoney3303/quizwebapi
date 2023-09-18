@@ -6,9 +6,11 @@ const correct3 = document.getElementById('correct-answer3');
 const wrong3 = document.getElementsByClassName("wrong-answer3");
 const startButton = document.getElementById("Start-button");
 const saveButton = document.getElementById("Save-score");
+const Highscores = document.getElementById("High-scores");
 var timer = document.getElementById("timer");
 var scoreEl = document.getElementById("score");
 var initials = document.getElementById("text");
+var savedName = document.getElementById("saved-name");
 // correct.addEventListener("click", function(event){
 localStorage.setItem("highschool", 1);
 var example = localStorage.getItem("highschool");
@@ -23,7 +25,16 @@ var timeleft = 60;
          timeleft--;
          timer.textContent = timeleft;
          console.log(timeleft);
+         if (timeleft == 0) {
+            document.getElementById("First-question").style.display = "none";
+            document.getElementById("Third-question").style.display = "none";
+            document.getElementById("Second-question").style.display = "none";
+            document.getElementById("End-screen").style.display = "block";
+            scoreEl.textContent = score;
+            clearInterval(timer);
+        }
      },1000);
+    
  }
 
 
@@ -41,6 +52,7 @@ wrong3[1].addEventListener ("click", wronganswer2);
 wrong3[2].addEventListener ("click", wronganswer2);
 correct3.addEventListener ("click", correctanswer3);
 saveButton.addEventListener("click", savescore);
+Highscores.addEventListener("click", scoreEl);
 
 function savescore() {
 console.log(initials.value);
@@ -69,6 +81,7 @@ function wronganswer1() {
     document.getElementById("First-question").style.display = "none";
     document.getElementById("Second-question").style.display = "block";
     document.getElementById("incorrect").style.display = "block";
+    document.getElementById("right").style.display = "none";
     score--;
     timeleft =timeleft - 10;
 }
@@ -76,6 +89,7 @@ function wronganswer1() {
 function correctanswer2(){
     document.getElementById("Second-question").style.display = "none";
     document.getElementById("Third-question").style.display = "block";
+    document.getElementById("incorrect").style.display = "none";
     document.getElementById("right").style.display = "block";
 }
 
@@ -83,6 +97,7 @@ function wronganswer2() {
     document.getElementById("Third-question").style.display = "block"
     document.getElementById("Second-question").style.display = "none";
     document.getElementById("incorrect").style.display = "block";
+    document.getElementById("right").style.display = "none";
     score--;
     timeleft =timeleft - 10;
 }
@@ -92,13 +107,25 @@ function correctanswer3(){
     document.getElementById("End-screen").style.display = "block";
     document.getElementById("right").style.display = "block";
     scoreEl.textContent = score;
+    document.getElementById("incorrect").style.display = "none";
+    document.getElementById("right").style.display = "block";
 }
 
 function wronganswer3() {
     document.getElementById("Third-question").style.display = "none"
     document.getElementById("End-screen").style.display = "block";
     document.getElementById("incorrect").style.display = "block";
+    document.getElementById("right").style.display = "none";
     score--;
     timeleft =timeleft - 10;
     scoreEl.textContent = score;
 }
+
+
+    function scoreEl() {
+        document.getElementById("Third-question").style.display = "none"
+    document.getElementById("End-screen").style.display = "none";
+    document.getElementById("incorrect").style.display = "none";
+    document.getElementById("right").style.display = "none";
+    document.getElementById("score-screen").style.display = "block";
+    }
