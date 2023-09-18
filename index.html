@@ -9,25 +9,61 @@
 <body>
     <header>
         <a href="High Scores">View High Scores</a>
-        <div class="Timer">Time:60</div>
+        <div id ="timer"></div>
     </header>
 
     <main>
-        <div class = "start-screen">
+        <div id = "start-screen">
             <h1>Start quiz and see what score you get</h1>
-            <button class="Start-button">Start</button>
+            <button id ="Start-button">Start</button>
         </div>
 
-        <!-- <div class="First-question">
-            <h2>An array can be used to store </h2>
-            <button class="first-answer"> strings</button>
-            <button class="second-answer"> numbers</button>
-            <button class="third-answer"> booleons</button>
-            <button class="fourth-answer"> All of the above</button>
-        </div> -->
+         <div id ="First-question">
+            <h2>An array can be used to store? </h2>
+            <button class="wrong-answer1"> strings</button>
+            <button class="wrong-answer1"> numbers</button>
+            <button class="wrong-answer1"> booleons</button>
+            <button id="correct-answer1"> All of the above</button>
+        </div> 
+
+        <div id="Second-question">
+            <h2>what is an example of a booleon?</h2>
+            <button id="correct-answer2"> False</button>
+            <button class="wrong-answer2"> 33</button>
+            <button class="wrong-answer2"> hello</button>
+            <button class="wrong-answer2"> All of the above</button>
+
+        </div>
+
+        <div id="Third-question">
+            <h2>How to you acces an elements id?</h2>
+            <button id="correct-answer3"> document.getElementByid</button>
+            <button class="wrong-answer3"> drab.getElementByid</button>
+            <button class="wrong-answer3"> get element</button>
+            <button class="wrong-answer3"> All of the above</button>
+
+        </div>
+
+        <div id="End-screen">
+            <h2>Quiz complete!</h2>
+            <p>Your score: <span id="score"></span></p>
+            <label for="initials">Enter your initials:</label>
+            <input id = "text" type="text">
+            <button id="Save-score">Save your score</button>
+            
+
+        </div>
+
+        <div id="right">
+        <h4>Correct</h4>
+        </div>
+
+        <div id="incorrect">
+            <h4>Incorrect</h4>
+        </div>
 
     </main>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/script.js"></script>
 </body>
 </html>

@@ -20,3 +20,22 @@ h2
 {
     text-align: center;
 }
+/* erases none present questions */
+#First-question {
+display: none;
+}
+#Second-question {
+    display: none;
+}
+#Third-question {
+    display: none;
+}
+#End-screen {
+    display: none;
+}
+#right {
+    display: none;
+}
+#incorrect {
+    display: none;
+}
