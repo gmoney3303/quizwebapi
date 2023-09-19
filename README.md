@@ -1,5 +1,8 @@
 # quizwebapi
 
+# deployed link
+https://gmoney3303.github.io/quizwebapi/
+
 ## Description
 I am building a quiz website mostly using javascript that has a timer and keeps track of your score. it also allows you to save your score in local storage.
 I learned more about getting classes and ids as when you get class by name it creates an array when theres more. also local sorage how to set and get items.
